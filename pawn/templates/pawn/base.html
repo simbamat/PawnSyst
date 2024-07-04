@@ -3,11 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>PawnSyst</title>
+    <title>QuickCashPawn</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
   </head>
   <body>
-    <h1>PawnSyst</h1>
+    <h1>QuickCashPawn</h1>
+    <div class="topnav">
+      <a class="active" href="{% url 'transaction_list' %}">Home</a>
+      <a href="{% url 'item_create' %}">Add New Item</a>
+      <a href="{% url 'customer_create' %}">Add New Customer</a>
+      <a href="#contact">Contact</a>
+      <a href="#Help Center">Help Center</a>
+    </div>
   </body>
 </html>

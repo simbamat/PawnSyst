@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Pawn Transactions</title>
+  </head>
+  <body>
+    <h1>Pawn Transactions</h1>
+    <ul>
+      {% for transaction in transactions %}
+      <li>
+        {{ transaction.customer }} pawned {{ transaction.item }} amount of
+        {{transaction.amount_loaned}} on {{ transaction.pawn_date }}. Expiry
+        Date: {{ transaction.pawn_expiry_date }}
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'transaction_create' %}">Create New Transaction</a>
+  </body>
+</html>

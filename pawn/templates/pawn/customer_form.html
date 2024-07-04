@@ -1,0 +1,15 @@
+<!-- pawn/templates/pawn/customer_form.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Customer</title>
+  </head>
+  <body>
+    <h1>Add Customer</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'transaction_list' %}">Back to Transactions</a>
+  </body>
+</html>

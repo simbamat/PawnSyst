@@ -1,0 +1,20 @@
+<!-- pawn/templates/pawn/customer_list.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Customer List</title>
+  </head>
+  <body>
+    <h1>Customer List</h1>
+    <ul>
+      {% for customer in customers %}
+      <li>
+        {{ customer.first_name }} {{ customer.last_name }} ({{ customer.email
+        }})
+      </li>
+      {% endfor %}
+    </ul>
+    <a href="{% url 'customer_create' %}">Add New Customer</a>
+    <a href="{% url 'transaction_list' %}">Back to Transactions</a>
+  </body>
+</html>

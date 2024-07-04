@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Create Pawn Transaction</title>
+  </head>
+  <body>
+    <h1>Create Pawn Transaction</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Submit</button>
+    </form>
+    <a href="{% url 'transaction_list' %}">Back to Transactions</a>
+  </body>
+</html>
